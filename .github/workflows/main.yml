@@ -16,6 +16,6 @@ jobs:
       - name: Build MS-DOS 4.0
         shell: cmd
         run: |
-          cd 4.0
+          cd v4.0
           call setenv.bat
           nmake /f makefile

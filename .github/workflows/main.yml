@@ -1,0 +1,21 @@
+name: Build MS-DOS 4.0
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build MS-DOS 4.0
+        shell: cmd
+        run: |
+          cd 4.0
+          call setenv.bat
+          nmake /f makefile

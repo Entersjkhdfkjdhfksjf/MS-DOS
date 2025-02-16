@@ -17,5 +17,6 @@ jobs:
         shell: cmd
         run: |
           cd v4.0
+          cd src
           call setenv.bat
           nmake /f makefile
